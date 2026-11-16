@@ -168,7 +168,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 		<div class="button-group">
 			<button id="copy" class="btn" title="Copy to clipboard">📋 copy Weaver to clipboard</button>
 			<button id="run" class="btn"></button>
-			<div style="margin-left: 2rem;">with <a target="_blank" href="https://broccolimicro.io">Loom</a> <span id="version">v0.14.0</span></div>
+			<div style="margin-left: 2rem;">with <a target="_blank" href="https://broccolimicro.io">Bok</a> <span id="version">v0.14.0</span></div>
 		</div>
 		<div class="output-container">
 			<div class="output-panel">
@@ -338,7 +338,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 
 													// Call the WebAssembly function
 													const resultPtr = Module.ccall(
-														'processLoomCode',  // function name
+														'processBokCode',  // function name
 														'number',           // return type (pointer)
 														['string'],         // argument types
 														[code]              // arguments

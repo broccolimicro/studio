@@ -427,9 +427,9 @@ LDFLAGS = -s WASM=1 \
           -s MODULARIZE=1 \
           -s EXPORT_ES6=1 \
           -s USE_ES6_IMPORT_META=1 \
-          -s EXPORT_NAME='createLoomModule' \
+          -s EXPORT_NAME='createBokModule' \
           -s ENVIRONMENT=web \
-          -s EXPORTED_FUNCTIONS='["_processLoomCode","_init","_malloc","_free"]' \
+          -s EXPORTED_FUNCTIONS='["_processBokCode","_init","_malloc","_free"]' \
           -s EXPORTED_RUNTIME_METHODS='["ccall","cwrap","UTF8ToString"]' \
           -s ALLOW_TABLE_GROWTH=1 \
           -s INVOKE_RUN=0 \

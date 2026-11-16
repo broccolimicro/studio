@@ -93,7 +93,7 @@ extern "C" {
 		}
 
 	EMSCRIPTEN_KEEPALIVE
-		char* processLoomCode(const char* raw_user_input) {
+		char* processBokCode(const char* raw_user_input) {
 			try {
 				std::string result = render_weaver(std::string(raw_user_input));
 				

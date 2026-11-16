@@ -16,7 +16,7 @@ async function initialize() {
         console.log("Loading WebAssembly module...");
         
         // Wait for the module to be ready
-        const Module = await window.loomModulePromise;
+        const Module = await window.bokModulePromise;
         console.log("WebAssembly module loaded:", Module);
         
         // Test the module
@@ -35,7 +35,7 @@ async function initialize() {
             output.textContent = `Test successful! ${testResult}\n\n`;
             
             // Store the module for later use
-            window.loomModule = Module;
+            window.bokModule = Module;
             status.textContent = 'Ready';
             document.getElementById('run-btn').disabled = false;
             console.log("Initialization complete");
@@ -59,7 +59,7 @@ document.getElementById('run-btn').addEventListener('click', async () => {
     status.textContent = 'Running...';
     
     try {
-        if (!window.loomModule) {
+        if (!window.bokModule) {
             throw new Error("WebAssembly module not loaded");
         }
         
@@ -67,8 +67,8 @@ document.getElementById('run-btn').addEventListener('click', async () => {
         console.log("Running with code:", code);
         
         // Call the C++ function using ccall
-        const result = window.loomModule.ccall(
-            'processLoomCode',  // function name
+        const result = window.bokModule.ccall(
+            'processBokCode',  // function name
             'string',           // return type
             ['string'],         // argument types
             [code]              // arguments
