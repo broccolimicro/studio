@@ -51,7 +51,7 @@ chp::graph importCHPFromCogString(const string &cog) {
 
 
 
-std::string render_weaver(const std::string &raw_user_input) {
+std::string render_choy(const std::string &raw_user_input) {
 
     // Atempt to parse COG from raw user input
     chp::graph g = importCHPFromCogString(raw_user_input);
@@ -95,7 +95,7 @@ extern "C" {
 	EMSCRIPTEN_KEEPALIVE
 		char* processBokCode(const char* raw_user_input) {
 			try {
-				std::string result = render_weaver(std::string(raw_user_input));
+				std::string result = render_choy(std::string(raw_user_input));
 				
 				// Allocate memory for the result string in the WebAssembly module
 				char* output = (char*)malloc(result.length() + 1);

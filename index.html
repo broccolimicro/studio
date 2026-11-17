@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Weaver on-demand 🚨🚒🥦🥦</title>
+		<title>Choy on-demand 🚨🚒🥦🥦</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 		<!-- Load CodeMirror -->
@@ -147,7 +147,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 
 	<body>
 		<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
-			<h1 style="font-family: serif; margin: 0;">Do you even code <span style="color: seagreen;">Weaver</span>? 👀</h1>
+			<h1 style="font-family: serif; margin: 0;">Do you even code <span style="color: seagreen;">Choy</span>? 👀</h1>
 			<div style="display: flex; align-items: center;">
 				<label for="preset-select" style="margin-right: 10px; font-family: sans-serif;">You're not you when you're hungry...  Try a template!</label>
 				<select id="preset-select" style="padding: 5px; border-radius: 4px; border: 1px solid #ddd; font-family: monospace;">
@@ -166,7 +166,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 </div>
 		<textarea id="editor">//Your slop not found ...yet</textarea>
 		<div class="button-group">
-			<button id="copy" class="btn" title="Copy to clipboard">📋 copy Weaver to clipboard</button>
+			<button id="copy" class="btn" title="Copy to clipboard">📋 copy Choy to clipboard</button>
 			<button id="run" class="btn"></button>
 			<div style="margin-left: 2rem;">with <a target="_blank" href="https://broccolimicro.io">Bok</a> <span id="version">v0.14.0</span></div>
 		</div>
@@ -205,7 +205,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 			const presets = {
 				'default': '\/\/ Your slop code ain\'t gonna write itself!\n\/\/ Click `Run` or press `Shift+Enter` to optimize your slop 💀💀\n\nwhile {\n  l = L.recv();\n  c = Cc.probe();\n\n  if c == 0 {\n    R0.send(l)\n\n  } or if c == 1 {\n    R1.send(l)\n  }\n  Cc.recv()\n}',
 				'buffer': 'while {\n  l = L.recv(); R.send(l)\n}',
-				'hse_buffer': '\/\/ Sneak peak at another lower, near-wire-level internal representation\n\/\/ NOTE: this builds, but that subsystem is stripped out here to keep this site blazing fast\n\/\/ Weaver doesn\'t look half-bad now by comparison, huh?\n\/\/ We ship 10x faster\n\nregion 1 {\n    L.f- and L.t-\n    await L.e\n    while {\n      L.f+ xor L.t+\n      await ~L.e\n      L.f- and L.t-\n      await L.e\n    }\n  } and {\n    L.e+ and R.f- and R.t-\n    await R.e & ~L.f & ~L.t\n    while {\n      await R.e & L.f {\n        R.f+\n      } or await R.e & L.t {\n        R.t+\n      }\n      L.e-\n      await ~R.e & ~L.f & ~L.t\n      R.f- and R.t-\n      L.e+\n    }\n  } and region 1 {\n    R.e+\n    await ~R.f & ~R.t\n    while {\n      await R.f | R.t\n      R.e-\n      await ~R.f & ~R.t\n      R.e+\n    }\n  }',
+				'hse_buffer': '\/\/ Sneak peak at another lower, near-wire-level internal representation\n\/\/ NOTE: this builds, but that subsystem is stripped out here to keep this site blazing fast\n\/\/ Choy doesn\'t look half-bad now by comparison, huh?\n\/\/ We ship 10x faster\n\nregion 1 {\n    L.f- and L.t-\n    await L.e\n    while {\n      L.f+ xor L.t+\n      await ~L.e\n      L.f- and L.t-\n      await L.e\n    }\n  } and {\n    L.e+ and R.f- and R.t-\n    await R.e & ~L.f & ~L.t\n    while {\n      await R.e & L.f {\n        R.f+\n      } or await R.e & L.t {\n        R.t+\n      }\n      L.e-\n      await ~R.e & ~L.f & ~L.t\n      R.f- and R.t-\n      L.e+\n    }\n  } and region 1 {\n    R.e+\n    await ~R.f & ~R.t\n    while {\n      await R.f | R.t\n      R.e-\n      await ~R.f & ~R.t\n      R.e+\n    }\n  }',
 				'merge': 'while {\n  c = Cc.recv();\n\n  await c == 0 {\n    l = L0.recv()\n\n  } or await c == 1 {\n    l = L1.recv()\n  }\n  R.send(l)\n}',
 				'copy': 'while {\n  l = L.recv();\n  R0.send(l) and R1.send(l)\n}',
 				'func': 'while {\n  l0 = L0.recv() and l1 = L1.recv();\n  R.send(l0 | l1)\n}',
@@ -381,7 +381,7 @@ body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #ddd
 						copyToClipboard(editor.getValue(), copyButton);
 						// Show checkmark in the button
 						const originalText = copyButton.textContent;
-						copyButton.textContent = ' ✓ copied Weaver to clipboard';
+						copyButton.textContent = ' ✓ copied Choy to clipboard';
 						setTimeout(() => {
 							copyButton.textContent = originalText;
 						}, 2000);
